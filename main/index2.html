@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Diwali Meri Chamak Challo</title>
+    <link rel="stylesheet" href="../src/output.css">
+</head>
+<body class="bg-[#087E8B] grid place-content-center h-[100vh]">
+    <h3 id="click" class="text-center md:hidden font-semibold text-xl 
+    my-4">Click on card to open </h3>
+    <div class="container relative h-[50vh] w-[50vw] bg-[#F5F5F5] 
+    shadow-[30px_40px_40px_rgba(0,0,0,0.5)] rounded-r-xl pers md:h-[500px] md:w-[300px]
+    flex flex-col items-center justify-center">
+        <h1 class="text-xl md:text-3xl text-center mb-4">HAPPY DIWALI MERI VISHH ❤️❤️</h1>
+        <h2 class="text-xl md:text-3xl text-center mb-4">YE LE KHUB SAARI KISS😂😂</h2>
+        <h2 class="text-xl md:text-3xl text-center">😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘</h2>
+        <div class="card absolute top-0 left-0 h-[100%] w-[100%] rounded-r-xl bg-[#A4036F] 
+        transform-property">
+            <div class="front absolute h-[100%] w-[100%] bg-[#EFEA5A]
+            rounded-r-xl flex items-center flex-col ">
+            <h3 class="bg-[#FB3640] text-base md:text-xl p-3 font-serif
+            mt-1 rounded-xl font-semibold text-center">HAPPY DIWALI <br> MERI PATAKHA </h3>
+            <img class="h-[50%] mt-[5vh] md:mt-[10vh]" src="diwali-crackers.gif">
+        </div>
+            <div class="back absolute h-[100%] w-[100%] bg-[#16DB93]
+            rounded-l-xl"><video controls autoplay loop muted
+             class="h-[100%] w-[100%]
+            rounded-l-xl object-cover pointer-events-none" src="WhatsApp Video 2024-10-31 at 1.25.02 AM.mp4"></video></div>
+        </div>
+    </div>
+  <div class="text-center">
+    <button id="button"class="bg-[#F29E4C] mt-[10vh] rounded-2xl p-4
+     font-bold text:base md:text-xl active:bg-red-500 ">See previous one<br>
+    Again</button>
+  </div>
+    <style>
+        .pers{
+            perspective: 100em;
+        }
+        .container:hover .card{
+            transform: rotateY(-180deg);
+        }
+        /*.container:hover{
+            transform: translateX(25vw);
+        }*/
+        .back{
+            transform: rotateY(-180deg);
+        }
+        .front,.back{
+            backface-visibility: hidden;
+        }
+        .transform-property{
+            transition: transform 1s;
+            transform-style: preserve-3d;
+            transform-origin: left;
+        }
+        @media (hover: none) and (pointer: coarse) {
+            .container:hover .card {
+                transform: none;
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script src="script2.js"></script>
+</body>
+</html>
